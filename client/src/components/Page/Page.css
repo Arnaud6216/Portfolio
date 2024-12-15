@@ -1,38 +1,117 @@
+h1,
+h2,
+h3,
+p,
+ul,
+article,
+section {
+  opacity: 0; /* Texte invisible au début */
+  transform: translateY(20px); /* Décalage initial */
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Animation commune pour tous les éléments */
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Texte devient visible */
+    transform: translateY(0); /* Position normale */
+  }
+}
+
+/* Délais pour un effet en cascade */
+h1 {
+  animation-delay: 0.2s;
+}
+
+h2 {
+  animation-delay: 0.4s;
+}
+
+p:nth-of-type(1) {
+  animation-delay: 0.6s;
+}
+
+p:nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+
+p:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+.page-wrapper {
+  width: 750px;
+  height: 750px;
+  position: relative;
+  perspective: 1500px;
+  overflow: hidden;
+}
+
 .page {
-  position: absolute;
   width: 100%;
   height: 100%;
-  background: url(../../assets/images/page.png) no-repeat center center;
-  background-size: contain;
+  background: url("../../assets/images/page.png") no-repeat center center;
+  background-size: cover;
   border: 1px solid #8b4513;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  opacity: 0;
-  transform: rotateY(-180deg);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backface-visibility: hidden;
   transform-origin: left center;
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transform: rotateY(0deg);
 }
 
 .page-content {
-  position: absolute;
-  top: 50%;
-  left: 33%;
-}
-
-.page.visible {
-  opacity: 1;
-  transform: rotateY(0);
-}
-
-.page h2 {
-  font-family: "Cinzel", serif;
   text-align: center;
-  color: #8b4513;
+  font-family: "Cinzel", serif;
+  color: #5a2d0c;
 }
 
-.page p {
-  font-family: "Georgia", serif;
-  margin: 20px;
-  text-align: justify;
-  color: #333;
+.page.next {
+  transform: rotateY(180deg);
+}
+
+.page.previous {
+  transform: rotateY(-180deg);
+}
+
+.page-text {
+  max-width: 60ch;
+  margin: 3rem;
+}
+
+.skills-title {
+  margin: 2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+}
+
+.comp-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.skills-item {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  padding-right: 1rem;
+  box-shadow: 5px 5px 5px 0px rgb(194, 150, 93), inset 0px 0px 15px 0px
+    rgb(194, 150, 93);
+  transition: 0.2s;
+}
+
+.skills-item:hover {
+  transform: scale(1.1);
 }

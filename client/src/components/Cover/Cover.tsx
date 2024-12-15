@@ -6,24 +6,22 @@ interface CoverProps {
 }
 
 const Cover = ({ onOpen }: CoverProps) => {
-  const [animate, setAnimate] = useState(false);
+  const [isOpening, setIsOpening] = useState(false);
 
   const handleClick = () => {
-    setAnimate(true);
+    setIsOpening(true);
     setTimeout(onOpen, 1000);
   };
 
   return (
-    <button
-      type="button"
-      className={`cover ${animate ? "animate-cover" : ""}`}
+    <div
+      className={`cover ${isOpening ? "cover-opening" : ""}`}
       onClick={handleClick}
+      onKeyDown={handleClick}
     >
-      <div className="book-title">
-        <h1>Arnaud Guevaer</h1>
-        <p>Découvrez mon histoire</p>
-      </div>
-    </button>
+      <h1>Arnaud Guevaer</h1>
+      <p>Découvrez mon histoire</p>
+    </div>
   );
 };
 

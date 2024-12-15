@@ -1,0 +1,50 @@
+.book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(19, 18, 18);
+  /* background: url("../../assets/images/backgroundBody.jpg") no-repeat center
+    center;
+  background-size: cover; */
+}
+
+.book-content {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  background-color: #8b4513;
+  color: #f0e6d2;
+  border: none;
+  padding: 10px 20px;
+  font-family: "Cinzel", serif;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: transform 0.2s;
+}
+
+.nav-button:disabled {
+  background-color: #5a2d0c;
+  cursor: not-allowed;
+}
+
+.page-wrapper {
+  width: 800px;
+  height: 800px;
+  position: relative;
+  perspective: 1500px; /* Donne un effet 3D */
+  overflow: hidden; /* Masque les pages hors du conteneur */
+}
+
+.animated-page {
+  width: 100%;
+  height: 100%;
+  background: #fdf6e3;
+  position: absolute;
+  backface-visibility: hidden; /* Cache le verso */
+  transform-origin: left center;
+  border: 1px solid #8b4513;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}

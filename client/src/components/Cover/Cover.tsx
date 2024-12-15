@@ -19,7 +19,6 @@ const Cover = ({ onOpen }: CoverProps) => {
       onClick={handleClick}
       onKeyDown={handleClick}
     >
-      <h1>Arnaud Guevaer</h1>
       <p>Découvrez mon histoire</p>
     </div>
   );

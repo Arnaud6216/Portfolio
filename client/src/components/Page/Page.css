@@ -5,20 +5,18 @@ p,
 ul,
 article,
 section {
-  opacity: 0; /* Texte invisible au début */
-  transform: translateY(20px); /* Décalage initial */
+  opacity: 0;
+  transform: translateY(20px);
   animation: fadeInUp 1s ease forwards;
 }
 
-/* Animation commune pour tous les éléments */
 @keyframes fadeInUp {
   to {
-    opacity: 1; /* Texte devient visible */
-    transform: translateY(0); /* Position normale */
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Délais pour un effet en cascade */
 h1 {
   animation-delay: 0.2s;
 }

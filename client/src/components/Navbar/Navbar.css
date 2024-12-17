@@ -10,6 +10,11 @@
   color: #f4e8c1;
 }
 
+.navbar-hide {
+display: none;
+transition: 2s;
+}
+
 .profil-img {
   width: 252px;
   height: 333px;

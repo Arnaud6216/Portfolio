@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Cover from "../../components/Cover/Cover";
 import Page1 from "../../components/Page/Page1";
 import Page2 from "../../components/Page/Page2";
@@ -6,12 +6,14 @@ import Page3 from "../../components/Page/Page3";
 import Page4 from "../../components/Page/Page4";
 import "./Book.css";
 import { motion } from "framer-motion";
+import Context from "../../services/context";
 
 const Book = () => {
   const [isCoverOpen, setIsCoverOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [direction, setDirection] = useState<"next" | "previous">("next");
-
+  const context = useContext(Context);
+  const setNavStyle = context?.setNavStyle;
   const handleCoverOpen = () => setIsCoverOpen(true);
 
   const nextPage = () => {
@@ -22,7 +24,10 @@ const Book = () => {
   };
 
   const previousPage = () => {
-    if (currentPage > 0) {
+    if (currentPage === 0) {
+      setNavStyle?.("navbar");
+      setIsCoverOpen(false);
+    } else if (currentPage > 0) {
       setDirection("previous");
       setCurrentPage((prev) => prev - 1);
     }
@@ -52,7 +57,6 @@ const Book = () => {
             type="button"
             className="nav-button"
             onClick={previousPage}
-            disabled={currentPage === 0}
           >
             {"<"} Précédent
           </button>

@@ -31,7 +31,7 @@
 
 .page-wrapper {
   width: 800px;
-  height: 800px;
+  height: 720px;
   position: relative;
   perspective: 1500px; /* Donne un effet 3D */
   overflow: hidden; /* Masque les pages hors du conteneur */

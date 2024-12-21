@@ -1,3 +1,4 @@
+/*  ANIMATIONS SECTION  */
 h1,
 h2,
 h3,
@@ -36,7 +37,7 @@ p:nth-of-type(2) {
 p:nth-of-type(3) {
   animation-delay: 1s;
 }
-
+/*  PAGE STRUCTURE  */
 .page-wrapper {
   width: 750px;
   height: 750px;
@@ -75,11 +76,13 @@ p:nth-of-type(3) {
   transform: rotateY(-180deg);
 }
 
+/*  PAGE 1  */
 .page-text {
   max-width: 60ch;
   margin: 3rem;
 }
 
+/*  PAGE 2  */
 .skills-title {
   margin: 2rem;
 }
@@ -114,9 +117,86 @@ li {
   transform: scale(1.1);
 }
 
+/*  PAGE 3  */
 .project {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin: 1rem;
 }
+
+.project-details {
+  position: absolute;
+  transform: scale(3);
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 40rem;
+  margin: 3rem;
+}
+
+.projects-img {
+  aspect-ratio: 16 / 9;
+  width: 150px;
+  height: 100px;
+  border: #5a2d0c 2px solid;
+}
+
+.popup-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: rgb(194, 150, 93);
+  color: #5a2d0c;
+  border-radius: 10px;
+  border: #5a2d0c 5px solid;
+  padding: 1rem;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease-out; /* Animation pour plus de fluidité */
+}
+
+.popup-img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.popup-text {
+  margin: 1rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-button:hover {
+  background: darkred;
+}
+
+/*  PAGE 4  */

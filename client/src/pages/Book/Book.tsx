@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext, useState } from "react";
 import Cover from "../../components/Cover/Cover";
 import Page1 from "../../components/Page/Page1";
 import Page2 from "../../components/Page/Page2";
@@ -53,11 +53,7 @@ const Book = () => {
       {!isCoverOpen && <Cover onOpen={handleCoverOpen} />}
       {isCoverOpen && (
         <div className="book-content">
-          <button
-            type="button"
-            className="nav-button"
-            onClick={previousPage}
-          >
+          <button type="button" className="nav-button" onClick={previousPage}>
             {"<"} Précédent
           </button>
 

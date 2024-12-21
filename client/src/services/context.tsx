@@ -1,15 +1,15 @@
 import type { ReactNode } from "react";
-import { useState, createContext } from "react";
+import { createContext, useState } from "react";
 
 interface ContextProps {
-    navStyle: string;
-    setNavStyle: React.Dispatch<React.SetStateAction<string>>;
+  navStyle: string;
+  setNavStyle: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Context = createContext<ContextProps | undefined>(undefined);
 
 interface ProviderProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export const Provider = ({ children }: ProviderProps) => {
@@ -25,6 +25,5 @@ export const Provider = ({ children }: ProviderProps) => {
       {children}
     </Context.Provider>
   );
-}
+};
 export default Context;
-   

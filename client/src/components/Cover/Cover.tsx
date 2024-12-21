@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext, useState } from "react";
 import "./Cover.css";
 import Context from "../../services/context";
 
@@ -7,12 +7,11 @@ interface CoverProps {
 }
 
 const Cover = ({ onOpen }: CoverProps) => {
-
   const context = useContext(Context);
   const setNavStyle = context?.setNavStyle;
 
   const [isOpening, setIsOpening] = useState(false);
-  
+
   const handleClick = () => {
     setNavStyle?.("navbar-hide");
     setIsOpening(true);

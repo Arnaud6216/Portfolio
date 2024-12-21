@@ -92,6 +92,9 @@ const Page3 = () => {
                 src={project.img}
                 alt={project.name}
                 onClick={() => handleProjectDetails(project)}
+                onKeyDown={(e) =>
+                  e.key === "Enter" && handleProjectDetails(project)
+                }
               />
               <h3>{project.name}</h3>
             </article>

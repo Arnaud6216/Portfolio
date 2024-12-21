@@ -3,7 +3,6 @@ import "./Navbar.css";
 import Context from "../../services/context";
 
 function Navbar() {
-
   const context = useContext(Context);
   const navStyle = context?.navStyle;
 

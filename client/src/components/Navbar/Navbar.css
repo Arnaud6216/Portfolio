@@ -11,8 +11,8 @@
 }
 
 .navbar-hide {
-display: none;
-transition: 2s;
+  display: none;
+  transition: 2s;
 }
 
 .profil-img {

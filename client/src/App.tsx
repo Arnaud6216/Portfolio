@@ -6,9 +6,9 @@ import { Provider } from "./services/context";
 function App() {
   return (
     <>
-    <Provider >
-      <Navbar />
-      <Book />
+      <Provider>
+        <Navbar />
+        <Book />
       </Provider>
     </>
   );

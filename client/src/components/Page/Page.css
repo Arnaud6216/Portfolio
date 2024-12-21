@@ -113,3 +113,10 @@ li {
 .skills-item:hover {
   transform: scale(1.1);
 }
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}

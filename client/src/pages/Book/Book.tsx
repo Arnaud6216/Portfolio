@@ -58,6 +58,10 @@ const Book = () => {
           </button>
 
           <div className="page-wrapper">
+            {/* Fond sous la page qui ne doit pas tourner */}
+            <div className="page-background" />
+
+            {/* Animation de la page */}
             <motion.div
               className="animated-page"
               key={currentPage}

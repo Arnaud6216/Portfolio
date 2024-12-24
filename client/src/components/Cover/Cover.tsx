@@ -19,13 +19,15 @@ const Cover = ({ onOpen }: CoverProps) => {
   };
 
   return (
-    <div
-      className={`cover ${isOpening ? "cover-opening" : ""}`}
-      onClick={handleClick}
-      onKeyDown={handleClick}
-    >
-      <p>Découvrez mon histoire</p>
-    </div>
+    <>
+      <div
+        className={`cover ${isOpening ? "cover-opening" : ""}`}
+        onClick={handleClick}
+        onKeyDown={handleClick}
+      >
+        <p>Découvrez mon histoire</p>
+      </div>
+    </>
   );
 };
 

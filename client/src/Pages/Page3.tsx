@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
 import "./Page.css";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Page3 = () => {
   const projects = [
     {
-      img: "./src/assets/images/CQA.png",
+      img: "../src/assets/images/CQA.png",
       gif: "",
       name: "Code Quest Academy",
       description:
@@ -14,8 +14,8 @@ const Page3 = () => {
       url: "https://github.com/WildCodeSchool-2024-09/JS-lille-P3-code-quest-academy",
     },
     {
-      img: "./src/assets/images/zwarrior.png",
-      gif: "./src/assets/images/zwarrior.gif",
+      img: "../src/assets/images/zwarrior.png",
+      gif: "../src/assets/images/zwarrior.gif",
       name: "Z Warriors Clicker",
       description:
         "Un jeu incremental sur l'univers de Dragon Ball, où les joueurs cliquent pour accumuler de la puissance, débloquer des transformations et techniques puissantes, et vaincre des ennemis emblématiques.",
@@ -23,8 +23,8 @@ const Page3 = () => {
       url: "https://github.com/Arnaud6216/Z-Warriors-Clicker",
     },
     {
-      img: "./src/assets/images/feedgood.png",
-      gif: "./src/assets/images/feedgood.gif",
+      img: "../src/assets/images/feedgood.png",
+      gif: "../src/assets/images/feedgood.gif",
       name: "Feed good",
       description:
         "Réalisé lors d'un hackathon, Feed good est une application basée sur le thème de la bienveillance, où l'utilisateur peut effectuer des actions positives pour lui-même et pour les autres.",
@@ -32,8 +32,8 @@ const Page3 = () => {
       url: "https://github.com/WildCodeSchool-2024-09/lille-protojam",
     },
     {
-      img: "./src/assets/images/wildaway.png",
-      gif: "./src/assets/images/wildaway.gif",
+      img: "../src/assets/images/wildaway.png",
+      gif: "../src/assets/images/wildaway.gif",
       name: "Wild away",
       description:
         "Une application de réservation d'hotêls et de restaurants partout dans le monde avec une carte interactive.",
@@ -41,8 +41,8 @@ const Page3 = () => {
       url: "https://github.com/WildCodeSchool-2024-09/LILLE-0924-PROJECT2-G2-WILD-AWAY",
     },
     {
-      img: "./src/assets/images/fantizz.png",
-      gif: "./src/assets/images/fantizz.gif",
+      img: "../src/assets/images/fantizz.png",
+      gif: "../src/assets/images/fantizz.gif",
       name: "Fantizz",
       description: "Un quiz intéractif sur un thème humoristique.",
       technology: "HTML, CSS, Javascript.",

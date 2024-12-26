@@ -1,17 +1,8 @@
-import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Book from "./pages/Book/Book";
-import { Provider } from "./services/context";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./main";
 
-function App() {
-  return (
-    <>
-      <Provider>
-        <Navbar />
-        <Book />
-      </Provider>
-    </>
-  );
-}
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;

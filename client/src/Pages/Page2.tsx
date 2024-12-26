@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import "./Page.css";
+import { motion } from "framer-motion";
 
 const Page2 = () => {
   return (

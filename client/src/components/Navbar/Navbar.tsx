@@ -1,24 +1,27 @@
-import { useContext } from "react";
-import "./Navbar.css";
-import Context from "../../services/context";
+import { Link } from "react-router-dom";
 
-function Navbar() {
-  const context = useContext(Context);
-  const navStyle = context?.navStyle;
-
+const Navbar = () => {
   return (
-    <>
-      <div className={navStyle}>
-        <img
-          className="profil-img"
-          src="./src/assets/images/arnaud.jpg"
-          alt="Arnaud Guevaer"
-        />
-        <h1>Arnaud Guevaer</h1>
-        <p className="navbar-text">Développeur web Full stack</p>
-      </div>
-    </>
+    <nav className="navbar">
+      <ul className="nav-list">
+        <li>
+          <Link to="/">Accueil</Link>
+        </li>{" "}
+        <li>
+          <Link to="/book/intro">Introduction</Link>
+        </li>{" "}
+        <li>
+          <Link to="/book/skills">Compétences</Link>
+        </li>{" "}
+        <li>
+          <Link to="/book/projects">Projets</Link>
+        </li>{" "}
+        <li>
+          <Link to="/book/contact">Contact</Link>
+        </li>{" "}
+      </ul>
+    </nav>
   );
-}
+};
 
 export default Navbar;

@@ -6,24 +6,50 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 /* ************************************************************************* */
 
 // Import the main app component
-import App from "./App";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
+import Layout from "./components/Layout/Layout";
+import Page1 from "./Pages/Page1";
+import Page2 from "./Pages/Page2";
+import Page3 from "./Pages/Page3";
+import Page4 from "./Pages/Page4";
+import TableView from "./Pages/TableView/TableView";
 
 /* ************************************************************************* */
 
 // Create router configuration with routes
 // You can add more routes as you build out your app!
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
-    path: "/", // The root path
-    element: <App />, // Renders the App component for the home page
+    path: "/",
+    element: <TableView />,
   },
-  // Try adding a new route! For example, "/about" with an About component
+  {
+    path: "book",
+    element: <Layout />,
+    children: [
+      {
+        path: "intro",
+        element: <Page1 />,
+      },
+      {
+        path: "skills",
+        element: <Page2 />,
+      },
+      {
+        path: "projects",
+        element: <Page3 />,
+      },
+      {
+        path: "contact",
+        element: <Page4 />,
+      },
+    ],
+  },
 ]);
 
 /* ************************************************************************* */

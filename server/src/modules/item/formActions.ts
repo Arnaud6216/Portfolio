@@ -2,14 +2,17 @@ import type { RequestHandler } from "express";
 import nodemailer from "nodemailer";
 
 const add: RequestHandler = async (req, res) => {
+
+  console.info("Données reçues :", req.body);
+
     const { name, email, message } = req.body;
     if (!name || !email || !message) {
         res.status(400).json({ error: "Tous les champs sont requis." });
         return;
       }
     
-      // Configurer le transporteur d'email avec Nodemailer
       const transporter = nodemailer.createTransport({
+        
         service: "gmail", 
         auth: {
           user: process.env.EMAIL_USER, 

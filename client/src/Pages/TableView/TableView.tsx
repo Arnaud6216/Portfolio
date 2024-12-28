@@ -13,8 +13,8 @@ const TableView = () => {
           alt=""
         />
         <h1>Arnaud Guevaer</h1>
-        <h2>Développeur web full stack</h2>
-        <p>
+        <h2 className="profile-profession">Développeur web full stack</h2>
+        <p className="profile-text">
           Fan de science-fiction et d'heroic fantasy, venez découvrir mon
           histoire !
         </p>
@@ -35,6 +35,7 @@ const TableView = () => {
           className="book-image"
         />
       </div>
+      <div className="page-behind" />
     </div>
   );
 };

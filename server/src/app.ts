@@ -64,7 +64,6 @@ import router from "./router";
 
 // Mount the API router under the "/api" endpoint
 app.use(router);
-
 /* ************************************************************************* */
 
 // Production-ready setup: What is it for?
@@ -106,6 +105,7 @@ if (fs.existsSync(clientBuildPath)) {
 // Important: Error-handling middleware should be defined last, after other app.use() and routes calls.
 
 import type { ErrorRequestHandler } from "express";
+import formActions from "./modules/item/formActions";
 
 // Define a middleware function to log errors
 const logErrors: ErrorRequestHandler = (err, req, res, next) => {

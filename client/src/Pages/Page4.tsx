@@ -26,7 +26,7 @@ const Page4 = () => {
     event.preventDefault(); // Empêche le rechargement de la page
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("http://localhost:3000/book/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -137,9 +137,9 @@ const Page4 = () => {
             Envoyer
           </button>
         </form>
-        <div id="response" style={{ color: responseColor, marginTop: "10px" }}>
-          {responseMessage}
-        </div>
+      </div>
+      <div id="response" style={{ color: responseColor, marginTop: "10px" }}>
+        {responseMessage}
       </div>
     </motion.div>
   );

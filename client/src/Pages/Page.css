@@ -44,23 +44,12 @@ p:nth-of-type(3) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("./src/assets/images/page.png");
+  background: url("../../public/page.png");
   background-size: cover;
   height: 100%;
   text-align: center;
   font-family: "Cinzel", serif;
   color: #5a2d0c;
-}
-
-.page button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #8b4513;
-  color: white;
-  border: none;
-  border-radius: 5px;
 }
 
 /*  PAGE 1  */

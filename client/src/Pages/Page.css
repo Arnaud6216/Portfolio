@@ -262,3 +262,10 @@ li {
   cursor: pointer;
   font-size: 16px;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .page {
+    background: url("../../public/page2.avif");
+    background-size: cover;
+  }
+}

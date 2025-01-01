@@ -12,12 +12,15 @@ const TableView = () => {
           src="./src/assets/images/arnaud.jpg"
           alt=""
         />
-        <h1>Arnaud Guevaer</h1>
-        <h2 className="profile-profession">Développeur web full stack</h2>
-        <p className="profile-text">
-          Fan de science-fiction et d'heroic fantasy, venez découvrir mon
-          histoire !
-        </p>
+
+        <div className="profile-text-container">
+          <h1 className="title-name">Arnaud Guevaer</h1>
+          <h2 className="profile-profession">Développeur web full stack</h2>
+          <p className="profile-text">
+            Fan de science-fiction et d'heroic fantasy, venez découvrir mon
+            histoire !
+          </p>
+        </div>
       </div>
 
       <div

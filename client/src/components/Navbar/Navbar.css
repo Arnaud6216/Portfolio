@@ -29,3 +29,13 @@
 .nav-list li a:hover {
   color: #ff0;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .nav-list li a {
+    font-size: 14px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+  }
+}

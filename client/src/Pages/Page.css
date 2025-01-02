@@ -46,7 +46,8 @@ p:nth-of-type(3) {
   align-items: center;
   background: url("../../public/page.png");
   background-size: cover;
-  height: 100%;
+  height: 720px;
+  width: 720px;
   text-align: center;
   font-family: "Cinzel", serif;
   color: #5a2d0c;
@@ -192,7 +193,7 @@ li {
 .social-img {
   width: 50px;
   height: 50px;
-  margin: 1.5rem 2rem;
+  margin: 1.5rem 2rem 5rem 1.5rem;
 }
 
 .social-img:hover {
@@ -265,7 +266,83 @@ li {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .page {
-    background: url("../../public/page2.avif");
+    background: url("../../public/page2.jpg");
     background-size: cover;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .page-text {
+    margin: 0.8rem;
+    font-size: 0.84rem;
+  }
+
+  .skills-item {
+    margin: 0.5rem;
+    width: 85%;
+    font-size: 0.8rem;
+  }
+
+  .projects-container {
+    margin: 0;
+  }
+
+  article h3 {
+    font-size: 0.8rem;
+  }
+
+  .projects-img {
+    width: 100px;
+    height: 70px;
+  }
+
+  .form-container {
+    width: 40%;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+
+  #name,
+  #email,
+  #company,
+  #phone {
+    width: 70%;
+  }
+
+  .social-img {
+    margin: 1rem 0 0 1rem;
+    height: 40px;
+    width: 40px;
+  }
+
+  /* .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  .page4-content {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  #contact-form {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+    padding: 0.2rem;
+    background-color: rgba(235, 204, 161, 0.6);
+  }
+  .message-container {
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }
+
+  .submit-button {
+    margin-left: 35%;
+  }
+
+  .contact-text {
+    font-size: 0.9rem;
   }
 }

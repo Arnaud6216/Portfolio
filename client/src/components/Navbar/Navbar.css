@@ -38,4 +38,8 @@
   .nav-list {
     flex-wrap: wrap;
   }
+
+  .navbar {
+    width: 100vw;
+  }
 }

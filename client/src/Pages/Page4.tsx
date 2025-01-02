@@ -113,7 +113,7 @@ const Page4 = () => {
           </div>
 
           <div className="form-container">
-            <label htmlFor="phone">Téléphone</label>
+            <label htmlFor="phone">Tél</label>
             <input
               type="tel"
               id="phone"

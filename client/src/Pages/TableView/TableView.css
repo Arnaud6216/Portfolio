@@ -6,6 +6,7 @@
 
 .table-view {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
   width: 100vw;
@@ -30,7 +31,6 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(34, 33, 33);
-  margin-right: 20rem;
   color: antiquewhite;
 }
 
@@ -101,5 +101,24 @@
     height: 50%;
     width: 90%;
     margin-top: 4rem;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .profile-container {
+    margin-right: 0;
+  }
+
+  .book-container {
+    max-width: 700px;
+  }
+
+  .book-image {
+    width: 95%;
+  }
+
+  .profile-profession {
+    margin: 0.2rem;
+    font-size: 1.4rem;
   }
 }

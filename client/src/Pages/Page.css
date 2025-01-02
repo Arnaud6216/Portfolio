@@ -270,6 +270,7 @@ li {
     background-size: cover;
     width: 100%;
     height: 60vh;
+    box-shadow: 5px 5px 15px 2px #252525;
   }
 
   .page-text {
@@ -315,12 +316,6 @@ li {
     width: 40px;
   }
 
-  /* .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
-
   .page4-content {
     margin: 0;
     flex-direction: column;
@@ -344,5 +339,11 @@ li {
 
   .contact-text {
     font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .page {
+    flex-direction: column;
   }
 }

@@ -58,14 +58,22 @@ const Page4 = () => {
       <h2 className="contact-title">Contactez moi</h2>
       <div className="page4-content">
         <div className="content-container">
-          <a href="https://www.linkedin.com/in/arnaud-guevaer-11434a2a9/">
+          <a
+            href="https://www.linkedin.com/in/arnaud-guevaer-11434a2a9/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="social-img"
               src="../src/assets/images/linkedin.png"
               alt="linkedin link"
             />
           </a>
-          <a href="https://github.com/Arnaud6216">
+          <a
+            href="https://github.com/Arnaud6216"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="social-img"
               src="../src/assets/images/github.png"

@@ -10,14 +10,14 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
-// import About from "./pages/About";
-// import Contact from "./pages/Contact";
-import Layout from "./components/Layout/Layout";
 import Page1 from "./Pages/Page1";
 import Page2 from "./Pages/Page2";
 import Page3 from "./Pages/Page3";
 import Page4 from "./Pages/Page4";
 import TableView from "./Pages/TableView/TableView";
+// import About from "./pages/About";
+// import Contact from "./pages/Contact";
+import Layout from "./components/Layout/Layout";
 
 /* ************************************************************************* */
 

@@ -1,72 +1,31 @@
 import "./Page.css";
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+interface Projects {
+  id: number;
+  name: string;
+  img_src: string;
+  gif_src: string;
+  description: string;
+  technology: string;
+  url: string;
+}
 
 const Page3 = () => {
-  const projects = [
-    {
-      img: "../src/assets/images/CQA.png",
-      gif: "",
-      name: "Code Quest Academy",
-      description:
-        "Un jeu éducatif interactif mêlant investigation et apprentissage, où les joueurs incarnent un étudiant en développement web, résolvant des énigmes pour maîtriser HTML, CSS, JavaScript, et autres technologies, tout en explorant un narratif inspiré de la pop culture.",
-      technology: "React, TypeScript, Node.js, Express, SQL.",
-      url: "https://github.com/WildCodeSchool-2024-09/JS-lille-P3-code-quest-academy",
-    },
-    {
-      img: "../src/assets/images/zwarrior.png",
-      gif: "../src/assets/images/zwarrior.gif",
-      name: "Z Warriors Clicker",
-      description:
-        "Un jeu incremental sur l'univers de Dragon Ball, où les joueurs cliquent pour accumuler de la puissance, débloquer des transformations et techniques puissantes, et vaincre des ennemis emblématiques.",
-      technology: "React, TypeScript,",
-      url: "https://github.com/Arnaud6216/Z-Warriors-Clicker",
-    },
-    {
-      img: "../src/assets/images/feedgood.png",
-      gif: "../src/assets/images/feedgood.gif",
-      name: "Feed good",
-      description:
-        "Réalisé lors d'un hackathon, Feed good est une application basée sur le thème de la bienveillance, où l'utilisateur peut effectuer des actions positives pour lui-même et pour les autres.",
-      technology: "React, TypeScript, Node.js, Express.",
-      url: "https://github.com/WildCodeSchool-2024-09/lille-protojam",
-    },
-    {
-      img: "../src/assets/images/wildaway.png",
-      gif: "../src/assets/images/wildaway.gif",
-      name: "Wild away",
-      description:
-        "Une application de réservation d'hotêls et de restaurants partout dans le monde avec une carte interactive.",
-      technology: "React, TypeScript, Node.js, Express.",
-      url: "https://github.com/WildCodeSchool-2024-09/LILLE-0924-PROJECT2-G2-WILD-AWAY",
-    },
-    {
-      img: "../src/assets/images/fantizz.png",
-      gif: "../src/assets/images/fantizz.gif",
-      name: "Fantizz",
-      description: "Un quiz intéractif sur un thème humoristique.",
-      technology: "HTML, CSS, Javascript.",
-      url: "https://github.com/Foub404/projet-p1",
-    },
-  ];
+  const [projects, setProjects] = useState([] as Projects[]);
 
-  const [selectedProject, setSelectedProject] = useState<{
-    img: string;
-    gif: string;
-    name: string;
-    description: string;
-    technology: string;
-    url: string;
-  } | null>(null);
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}/api/projects`)
+      .then((response) => response.json())
+      .then((data: Projects[]) => {
+        setProjects(data);
+      });
+  }, []);
 
-  const handleProjectDetails = (project: {
-    img: string;
-    gif: string;
-    name: string;
-    description: string;
-    technology: string;
-    url: string;
-  }) => {
+  const [selectedProject, setSelectedProject] = useState<Projects | null>(null);
+
+  const handleProjectDetails = (project: Projects) => {
     setSelectedProject(project);
   };
 
@@ -89,7 +48,7 @@ const Page3 = () => {
             <article key={project.name} className="project">
               <img
                 className="projects-img"
-                src={project.img}
+                src={project.img_src}
                 alt={project.name}
                 onClick={() => handleProjectDetails(project)}
                 onKeyDown={(e) =>
@@ -124,7 +83,7 @@ const Page3 = () => {
               X
             </button>
             <img
-              src={selectedProject.gif || selectedProject.img}
+              src={selectedProject.gif_src || selectedProject.img_src}
               alt={selectedProject.name}
               className="popup-img"
             />

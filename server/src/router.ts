@@ -6,14 +6,18 @@ const router = express.Router();
 // Define Your API Routes Here
 /* ************************************************************************* */
 
-// Define item-related routes
-import itemActions from "./modules/item/itemActions";
-import formActions from "./modules/item/formActions";
+// Define skills-related routes
+import skillsActions from "./modules/skills/skillsActions";
 
-router.get("/api/items", itemActions.browse);
-router.get("/api/items/:id", itemActions.read);
-router.post("/api/items", itemActions.add);
-router.post("/book/contact", formActions.add);
+router.get("/api/skills", skillsActions.browse);
+router.get("/api/skills/:id", skillsActions.read);
+
+/* ************************************************************************* */
+// Define skills-related routes
+import projectsActions from "./modules/projects/projectsActions";
+
+router.get("/api/projects", projectsActions.browse);
+router.get("/api/projects/:id", projectsActions.read);
 
 /* ************************************************************************* */
 

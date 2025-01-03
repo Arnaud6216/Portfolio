@@ -273,9 +273,21 @@ li {
     box-shadow: 5px 5px 15px 2px #252525;
   }
 
+  .page-content {
+    overflow: scroll;
+  }
+
   .page-text {
     margin: 0.8rem;
     font-size: 0.84rem;
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .back {
+    margin-top: 2rem;
   }
 
   .skills-item {
@@ -319,6 +331,7 @@ li {
   .page4-content {
     margin: 0;
     flex-direction: column;
+    width: 100%;
   }
 
   #contact-form {
@@ -340,10 +353,29 @@ li {
   .contact-text {
     font-size: 0.9rem;
   }
+
+  #message {
+    width: 9rem;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .page {
     flex-direction: column;
+  }
+
+  .page-text {
+    max-width: 44ch;
+    margin: 1rem;
+  }
+
+  .social-img {
+    margin: 1.5rem 2rem 7rem 1.5rem;
+  }
+}
+
+@media only screen and (min-device-height: 729px) {
+  .layout {
+    height: 107vh;
   }
 }

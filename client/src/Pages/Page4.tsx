@@ -26,7 +26,7 @@ const Page4 = () => {
     event.preventDefault(); // Empêche le rechargement de la page
 
     try {
-      const response = await fetch("http://localhost:3000/book/contact", {
+      const response = await fetch("http://localhost:3310/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

@@ -200,10 +200,19 @@ li {
   transform: scale(1.1);
 }
 
-.contact-text {
+.contact-link {
+  font-size: 0.8rem;
+  display: block;
   margin: 0.5rem;
   font-weight: bold;
+  text-decoration: none;
+  color: #5a2d0c;
 }
+
+.contact-link:hover {
+  transform: scale(1.1);
+}
+
 #contact-form {
   display: flex;
   flex-direction: column;
@@ -291,8 +300,7 @@ li {
   }
 
   .skills-item {
-    margin: 0.5rem;
-    width: 85%;
+    width: 70%;
     font-size: 0.8rem;
   }
 
@@ -310,7 +318,7 @@ li {
   }
 
   .form-container {
-    width: 40%;
+    width: 90%;
     padding: 0.2rem;
     font-size: 0.8rem;
   }
@@ -335,8 +343,7 @@ li {
   }
 
   #contact-form {
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0;
     padding: 0.2rem;
     background-color: rgba(235, 204, 161, 0.6);
@@ -355,7 +362,7 @@ li {
   }
 
   #message {
-    width: 12rem;
+    width: 8rem;
   }
 }
 

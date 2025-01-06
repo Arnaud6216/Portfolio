@@ -73,9 +73,9 @@ const Page4 = () => {
               alt="github link"
             />
           </a>
-          <p className="contact-text">guevaer8@gmail.com</p>
-          <p className="contact-text">06 11 49 45 31</p>
-          <p className="contact-text">62136 La couture</p>
+          <a href="mailto:guevaer8@gmail.com" className="contact-link" >guevaer8@gmail.com</a>
+          <a href="tel:0611494531" className="contact-link">06 11 49 45 31</a>
+          <a href="https://www.google.fr/maps/place/62136+La+Couture/@50.5773848,2.6557477,8837m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47dd214f9638afcb:0x40af13e8163f570!8m2!3d50.581166!4d2.714009!16s%2Fm%2F02z35wf?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" className="contact-link">62136 La couture</a>
         </div>
         <form id="contact-form" onSubmit={handleSubmit}>
           <div className="form-container">

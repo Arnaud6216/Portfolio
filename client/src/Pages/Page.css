@@ -55,8 +55,8 @@ p:nth-of-type(3) {
 
 /*  PAGE 1  */
 .page-text {
-  max-width: 60ch;
-  margin: 3rem;
+  max-width: 45ch;
+  margin: 1.5rem;
 }
 
 /*  PAGE 2  */
@@ -193,7 +193,7 @@ li {
 .social-img {
   width: 50px;
   height: 50px;
-  margin: 1.5rem 2rem 5rem 1.5rem;
+  margin: 1.5rem 2rem 7rem 1.5rem;
 }
 
 .social-img:hover {
@@ -297,7 +297,7 @@ li {
   }
 
   .projects-container {
-    margin: 0;
+    margin: 0.5rem;
   }
 
   article h3 {
@@ -355,7 +355,7 @@ li {
   }
 
   #message {
-    width: 9rem;
+    width: 12rem;
   }
 }
 

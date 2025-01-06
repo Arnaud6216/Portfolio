@@ -9,7 +9,6 @@
 }
 
 .book-container {
-  width: 80%;
   height: 90vh;
   max-width: 800px;
   text-align: center;
@@ -36,9 +35,19 @@
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s;
+  width: 11rem;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+.book-container {
+  height: initial;
+}
+
+.layout {
+  height: 100vh;
+}
+
   .next-page,
   .prev-page {
     padding: 18px 15px;

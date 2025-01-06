@@ -110,6 +110,7 @@
 
   .book-container {
     max-width: 700px;
+    height: initial;
   }
 
   .book-image {

@@ -1,15 +1,8 @@
 import "./Page.css";
-import { motion } from "framer-motion";
 
 const Page1 = () => {
   return (
-    <motion.div
-      className="page"
-      initial={{ rotateY: -90, opacity: 0 }}
-      animate={{ rotateY: 0, opacity: 1 }}
-      exit={{ rotateY: 90, opacity: 0 }}
-      transition={{ duration: 0.6 }}
-    >
+    <div className="page">
       <div className="page-content">
         <h2>Introduction</h2>
         <p className="page-text">
@@ -40,7 +33,8 @@ const Page1 = () => {
           <strong>bien décidé à faire de cette passion mon métier</strong>.
         </p>
       </div>
-    </motion.div>
+        <div className="page-behind" />
+    </div>
   );
 };
 

@@ -37,8 +37,8 @@ const TableView = () => {
           alt="Livre fermé"
           className="book-image"
         />
-      </div>
       <div className="page-behind" />
+      </div>
     </div>
   );
 };

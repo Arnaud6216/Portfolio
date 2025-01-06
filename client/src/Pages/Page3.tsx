@@ -1,5 +1,4 @@
 import "./Page.css";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface Projects {
@@ -34,13 +33,7 @@ const Page3 = () => {
   };
 
   return (
-    <motion.div
-      className="page"
-      initial={{ rotateY: -90, opacity: 0 }}
-      animate={{ rotateY: 0, opacity: 1 }}
-      exit={{ rotateY: 90, opacity: 0 }}
-      transition={{ duration: 0.6 }}
-    >
+    <div className="page">
       <div className="page-content">
         <h2>Mes projets</h2>
         <section className="projects-container">
@@ -67,14 +60,7 @@ const Page3 = () => {
           onClick={handleCloseDetails}
           onKeyUp={(e) => e.key === "Escape" && handleCloseDetails()}
         >
-          <motion.div
-            className="popup-content"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="popup-content">
             <button
               type="button"
               className="close-button"
@@ -99,10 +85,10 @@ const Page3 = () => {
             >
               Voir sur Github
             </a>
-          </motion.div>
+          </div>
         </div>
       )}
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
 import "./Page.css";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 interface Skills {
@@ -22,13 +21,7 @@ const Page2 = () => {
 
   return (
     <>
-      <motion.div
-        className="page"
-        initial={{ rotateY: -90, opacity: 0 }}
-        animate={{ rotateY: 0, opacity: 1 }}
-        exit={{ rotateY: 90, opacity: 0 }}
-        transition={{ duration: 0.6 }}
-      >
+      <div className="page" >
         <div className="page-content">
           <h2 className="skills-title">Compétences</h2>
 
@@ -70,7 +63,7 @@ const Page2 = () => {
             </article>
           </section>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };

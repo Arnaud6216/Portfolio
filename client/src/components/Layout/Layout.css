@@ -12,6 +12,7 @@
   height: 90vh;
   max-width: 800px;
   text-align: center;
+  position: relative;
 }
 
 .navigation-buttons {
@@ -36,6 +37,32 @@
   border-radius: 5px;
   transition: background-color 0.3s;
   width: 11rem;
+}
+
+.page-turn-next {
+animation: previous ease-in-out 1s;
+}
+
+@keyframes previous {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.page-turn-previous {
+ animation: next ease-in-out 1s;
+}
+
+@keyframes next {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -74,5 +101,6 @@
   .book-container {
     width: inherit;
     max-width: inherit;
+    height: initial;
   }
 }

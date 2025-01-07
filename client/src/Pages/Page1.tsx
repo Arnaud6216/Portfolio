@@ -33,7 +33,6 @@ const Page1 = () => {
           <strong>bien décidé à faire de cette passion mon métier</strong>.
         </p>
       </div>
-        <div className="page-behind" />
     </div>
   );
 };

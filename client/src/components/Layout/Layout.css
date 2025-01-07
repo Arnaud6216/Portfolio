@@ -40,12 +40,12 @@
 }
 
 .page-turn-next {
-animation: previous ease-in-out 1s;
+  animation: previous ease-in-out 1s;
 }
 
 @keyframes previous {
   0% {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
   100% {
     transform: translateX(0);
@@ -53,12 +53,12 @@ animation: previous ease-in-out 1s;
 }
 
 .page-turn-previous {
- animation: next ease-in-out 1s;
+  animation: next ease-in-out 1s;
 }
 
 @keyframes next {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
   100% {
     transform: translateX(0);
@@ -66,14 +66,14 @@ animation: previous ease-in-out 1s;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .book-container {
+    height: initial;
+    width: 80%;
+  }
 
-.book-container {
-  height: initial;
-}
-
-.layout {
-  height: 100vh;
-}
+  .layout {
+    height: 100vh;
+  }
 
   .next-page,
   .prev-page {
@@ -84,6 +84,12 @@ animation: previous ease-in-out 1s;
 
   .navigation-buttons {
     top: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 767px) {
+  .book-container {
+    height: 60vh;
   }
 }
 

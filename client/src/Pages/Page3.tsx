@@ -33,34 +33,34 @@ const Page3 = () => {
   };
 
   return (
-    <div className="page">
-      <div className="page-content">
-        <h2>Mes projets</h2>
+    <article className="page">
+      <section className="page-content">
+        <h1>Mes projets</h1>
         <section className="projects-container">
           {projects.map((project) => (
             <article key={project.name} className="project">
               <img
                 className="projects-img"
                 src={project.img_src}
-                alt={project.name}
+                alt=""
                 onClick={() => handleProjectDetails(project)}
                 onKeyDown={(e) =>
                   e.key === "Enter" && handleProjectDetails(project)
                 }
               />
-              <h3>{project.name}</h3>
+              <h2>{project.name}</h2>
             </article>
           ))}
         </section>
-      </div>
+      </section>
 
       {selectedProject && (
-        <div
+        <aside
           className="popup-overlay"
           onClick={handleCloseDetails}
           onKeyUp={(e) => e.key === "Escape" && handleCloseDetails()}
         >
-          <div className="popup-content">
+          <article className="popup-content">
             <button
               type="button"
               className="close-button"
@@ -70,7 +70,7 @@ const Page3 = () => {
             </button>
             <img
               src={selectedProject.gif_src || selectedProject.img_src}
-              alt={selectedProject.name}
+              alt=""
               className="popup-img"
             />
             <h2>{selectedProject.name}</h2>
@@ -85,10 +85,10 @@ const Page3 = () => {
             >
               Voir sur Github
             </a>
-          </div>
-        </div>
+          </article>
+        </aside>
       )}
-    </div>
+    </article>
   );
 };
 

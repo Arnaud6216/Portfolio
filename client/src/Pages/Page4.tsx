@@ -10,7 +10,7 @@ const Page4 = () => {
     message: "",
   });
   const [responseMessage, setResponseMessage] = useState("");
-  const [responseColor, setResponseColor] = useState("");
+  const [responseStyle, setResponseStyle] = useState("");
 
   // Gestion des changements dans le formulaire
   const handleChange = (
@@ -34,23 +34,23 @@ const Page4 = () => {
       const result = await response.json();
       if (response.ok) {
         setResponseMessage(result.success);
-        setResponseColor("green");
+        setResponseStyle("sucess");
       } else {
         setResponseMessage(result.error);
-        setResponseColor("red");
+        setResponseStyle("error");
       }
     } catch (error) {
       console.error("Erreur lors de la soumission du formulaire :", error);
       setResponseMessage("Une erreur est survenue. Veuillez réessayer.");
-      setResponseColor("red");
+      setResponseStyle("error");
     }
   };
 
   return (
-    <div className="page">
-      <h2 className="contact-title">Contactez moi</h2>
-      <div className="page4-content">
-        <div className="content-container">
+    <section className="page">
+      <h1 className="contact-title">Contactez moi</h1>
+      <section className="page4-content">
+        <aside className="content-container">
           <a
             href="https://www.linkedin.com/in/arnaud-guevaer-11434a2a9/"
             target="_blank"
@@ -73,12 +73,22 @@ const Page4 = () => {
               alt="github link"
             />
           </a>
-          <a href="mailto:guevaer8@gmail.com" className="contact-link" >guevaer8@gmail.com</a>
-          <a href="tel:0611494531" className="contact-link">06 11 49 45 31</a>
-          <a href="https://www.google.fr/maps/place/62136+La+Couture/@50.5773848,2.6557477,8837m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47dd214f9638afcb:0x40af13e8163f570!8m2!3d50.581166!4d2.714009!16s%2Fm%2F02z35wf?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" className="contact-link">62136 La couture</a>
-        </div>
+          <a href="mailto:guevaer8@gmail.com" className="contact-link">
+            guevaer8@gmail.com
+          </a>
+          <a href="tel:0611494531" className="contact-link">
+            06 11 49 45 31
+          </a>
+          <a
+            href="https://www.google.fr/maps/place/62136+La+Couture/@50.5773848,2.6557477,8837m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47dd214f9638afcb:0x40af13e8163f570!8m2!3d50.581166!4d2.714009!16s%2Fm%2F02z35wf?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+            className="contact-link"
+          >
+            62136 La couture
+          </a>
+        </aside>
         <form id="contact-form" onSubmit={handleSubmit}>
-          <div className="form-container">
+          <fieldset className="form-container">
+            <legend hidden>Nom</legend>
             <label htmlFor="name">Nom *</label>
             <input
               type="text"
@@ -87,10 +97,12 @@ const Page4 = () => {
               value={formData.name}
               onChange={handleChange}
               required
+              aria-required="true"
             />
-          </div>
+          </fieldset>
 
-          <div className="form-container">
+          <fieldset className="form-container">
+            <legend hidden>Société</legend>
             <label htmlFor="company">Société</label>
             <input
               type="text"
@@ -99,9 +111,10 @@ const Page4 = () => {
               value={formData.company}
               onChange={handleChange}
             />
-          </div>
+          </fieldset>
 
-          <div className="form-container">
+          <fieldset className="form-container">
+            <legend hidden>Email</legend>
             <label htmlFor="email">Email *</label>
             <input
               type="email"
@@ -110,10 +123,12 @@ const Page4 = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              aria-required="true"
             />
-          </div>
+          </fieldset>
 
-          <div className="form-container">
+          <fieldset className="form-container">
+            <legend hidden>Téléphone</legend>
             <label htmlFor="phone">Tél</label>
             <input
               type="tel"
@@ -122,9 +137,10 @@ const Page4 = () => {
               value={formData.phone}
               onChange={handleChange}
             />
-          </div>
+          </fieldset>
 
-          <div className="message-container">
+          <fieldset className="message-container">
+            <legend hidden>Message</legend>
             <label htmlFor="message">Message *</label>
             <textarea
               id="message"
@@ -132,17 +148,16 @@ const Page4 = () => {
               value={formData.message}
               onChange={handleChange}
               required
+              aria-required="true"
             />
-          </div>
+          </fieldset>
           <button className="submit-button" type="submit">
             Envoyer
           </button>
         </form>
-      </div>
-      <div id="response" style={{ color: responseColor, marginTop: "10px" }}>
-        {responseMessage}
-      </div>
-    </div>
+      </section>
+      <aside className={responseStyle}>{responseMessage}</aside>
+    </section>
   );
 };
 

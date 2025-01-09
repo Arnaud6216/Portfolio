@@ -2,9 +2,9 @@ import "./Page.css";
 
 const Page1 = () => {
   return (
-    <div className="page">
-      <div className="page-content">
-        <h2>Introduction</h2>
+    <article className="page">
+      <section className="page-content">
+        <h1>Introduction</h1>
         <p className="page-text">
           Avant d'entamer ma reconversion dans le{" "}
           <strong>développement web</strong>, j'ai commencé en tant que Gendarme
@@ -32,8 +32,8 @@ const Page1 = () => {
           Wild Code School,{" "}
           <strong>bien décidé à faire de cette passion mon métier</strong>.
         </p>
-      </div>
-    </div>
+      </section>
+    </article>
   );
 };
 

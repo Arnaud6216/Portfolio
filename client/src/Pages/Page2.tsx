@@ -21,23 +21,19 @@ const Page2 = () => {
 
   return (
     <>
-      <div className="page" >
-        <div className="page-content">
-          <h2 className="skills-title">Compétences</h2>
+      <article className="page">
+        <section className="page-content">
+          <h1 className="skills-title">Compétences</h1>
 
           <section className="skills">
             <article className="front">
-              <h3>Front-end</h3>
+              <h2>Front-end</h2>
               <ul className="front-list">
                 {skills
                   ?.filter((skill) => skill.type === "front")
                   .map((skill) => (
                     <li className="skills-item" key={skill.id}>
-                      <img
-                        className="comp-img"
-                        src={skill.img_src}
-                        alt={skill.name}
-                      />
+                      <img className="comp-img" src={skill.img_src} alt="" />
                       {skill.name}
                     </li>
                   ))}
@@ -45,25 +41,21 @@ const Page2 = () => {
             </article>
 
             <article className="back">
-              <h3>Back-end</h3>
+              <h2>Back-end</h2>
               <ul className="back-list">
                 {skills
                   ?.filter((skill) => skill.type === "back")
                   .map((skill) => (
                     <li className="skills-item" key={skill.id}>
-                      <img
-                        className="comp-img"
-                        src={skill.img_src}
-                        alt={skill.name}
-                      />
+                      <img className="comp-img" src={skill.img_src} alt="" />
                       {skill.name}
                     </li>
                   ))}
               </ul>
             </article>
           </section>
-        </div>
-      </div>
+        </section>
+      </article>
     </>
   );
 };
